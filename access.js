@@ -1,9 +1,9 @@
-const ACCESS_EMAIL_KEY = "k3AccessEmail";
-const ACCESS_LOG_KEY = "k3AccessLog";
-const ACCESS_PERSISTENT_EMAIL_KEY = "k3AccessEmailPersistent";
+const ACCESS_EMAIL_KEY = "appAccessEmail";
+const ACCESS_LOG_KEY = "appAccessLog";
+const ACCESS_PERSISTENT_EMAIL_KEY = "appAccessEmailPersistent";
 const APP_CONFIG = window.APP_CONFIG || {};
 const SHEETS_URL = APP_CONFIG.sheetsUrl || "";
-const ACCESS_LOGO = APP_CONFIG.accessLogo || "assets/logo-fuerza-popular.png";
+const ACCESS_LOGO = APP_CONFIG.accessLogo || "assets/logo-alianza-para-el-progreso.png";
 
 function isValidEmail(value) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(value).trim());

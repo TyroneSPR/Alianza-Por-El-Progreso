@@ -4,14 +4,14 @@ const resultButton = document.getElementById("simulador-resultado-boton");
 const storedResult = localStorage.getItem("simuladorResultado");
 
 if (storedResult === "painted") {
-  resultTitle.textContent = "Felicidades, ya aprendiste cómo votar por Fuerza Popular, el K-3.";
-  resultText.textContent = "Marcaste la cédula y completaste la práctica correctamente.";
+  resultTitle.textContent = "¡Buen trabajo! Completaste la práctica de marcado de cédula.";
+  resultText.textContent = "Practicase cómo marcar una opción en la cédula.";
   resultButton.textContent = "Volver al inicio";
   resultButton.href = "index.html";
 } else if (storedResult === "blank") {
   resultTitle.textContent = "Tu voto quedó en blanco.";
   resultText.textContent =
-    "No marcaste ninguna opción en la cédula. Eso se considera voto en blanco y deja una sensación triste, porque se pierde la oportunidad de apoyar a Fuerza Popular, el K-3.";
+    "No marcaste ninguna opción. En esta práctica, eso se registra como una cédula sin marcas.";
   resultButton.textContent = "Reintentar";
   resultButton.href = "simulador-cedula.html";
 } else {

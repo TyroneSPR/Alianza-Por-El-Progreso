@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: fuerza-popular-web
+    name: alianza-para-el-progreso-simulador
     runtime: static
     buildCommand: ""
     staticPublishPath: .
