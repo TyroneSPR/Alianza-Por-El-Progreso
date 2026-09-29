@@ -243,6 +243,19 @@ body {
   inset: 0;
 }
 
+.visual--campaign {
+  height: auto;
+  aspect-ratio: 4 / 1;
+  background: #245fa8;
+}
+
+.visual--campaign img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .visual--city {
   background:
     linear-gradient(105deg, #245fa8 0 16%, #eaf2fc 16% 84%, #e5323f 84% 100%);
@@ -1092,12 +1105,214 @@ body {
 }
 
 @media (min-width: 760px) {
+  .app-shell {
+    min-height: 100vh;
+    padding: 36px clamp(24px, 5vw, 88px) 56px;
+  }
+
   .phone-frame {
-    width: min(100%, 440px);
+    width: min(100%, 1120px);
+    padding: 24px;
+    border-radius: 34px;
+  }
+
+  .topbar {
+    grid-template-columns: 48px 1fr 48px;
+    padding-bottom: 18px;
+  }
+
+  .topbar__title {
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding: 28px 34px;
+    border-radius: 28px;
+  }
+
+  .hero__inner {
+    grid-template-columns: 112px 2px 1fr;
+    gap: 28px;
+  }
+
+  .hero__logo {
+    width: 96px;
+    height: 96px;
+  }
+
+  .hero__divider {
+    min-height: 112px;
   }
 
   .hero__title {
-    font-size: 2.35rem;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+  }
+
+  .hero__title-line--subtle {
+    font-size: 1.05rem;
+  }
+
+  .event-card {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(360px, 1.2fr);
+    align-items: center;
+    gap: 30px;
+    margin-top: 18px;
+    padding: 24px 28px;
+  }
+
+  .card__kicker {
+    font-size: 1.25rem;
+  }
+
+  .card__meta {
+    font-size: 0.96rem;
+  }
+
+  .countdown {
+    gap: 12px;
+    margin-top: 0;
+  }
+
+  .countdown__item {
+    padding: 14px 8px;
+  }
+
+  .countdown__item strong {
+    font-size: 1.5rem;
+  }
+
+  .countdown__item span {
+    font-size: 0.8rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 18px;
+  }
+
+  .info-card,
+  .promo-card {
+    min-height: 230px;
+    border-radius: 22px;
+  }
+
+  .info-card--wide,
+  .promo-card {
+    grid-column: auto;
+  }
+
+  .info-card__visual,
+  .info-card--wide .info-card__visual {
+    height: 150px;
+  }
+
+  .visual--campaign {
+    height: auto;
+  }
+
+  .promo-card__illustration {
+    height: 94px;
+  }
+
+  .info-card__content,
+  .promo-card {
+    padding: 18px 20px;
+  }
+
+  .info-card__content h3,
+  .promo-card__title {
+    font-size: 1.3rem;
+  }
+
+  .detail-panel {
+    margin-top: 14px;
+    padding: 30px clamp(28px, 5vw, 64px);
+    border-radius: 28px;
+  }
+
+  .detail-panel h1 {
+    font-size: 2.3rem;
+  }
+
+  .detail-panel h2 {
+    font-size: 1.35rem;
+  }
+
+  .detail-panel p {
+    font-size: 1.05rem;
+  }
+
+  .detail-block {
+    margin-top: 20px;
+    padding: 22px;
+  }
+
+  .simulator-screen {
+    margin-top: 16px;
+  }
+
+  .simulator-card {
+    padding: 40px clamp(36px, 8vw, 100px);
+    border-radius: 30px;
+  }
+
+  .simulator-card__logo-frame {
+    width: 180px;
+    height: 180px;
+  }
+
+  .simulator-card h1 {
+    font-size: 2.7rem;
+  }
+
+  .simulator-card__text,
+  .simulator-card__description {
+    max-width: 760px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1.12rem;
+  }
+
+  .simulator-card__date {
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 12px 24px;
+  }
+
+  .simulator-toolbar {
+    justify-content: center;
+    gap: 12px;
+    margin: 8px 0 18px;
+  }
+
+  .simulator-tool {
+    min-width: 86px;
+    padding: 12px 18px;
+    font-size: 1rem;
+  }
+
+  .ballot-simulator {
+    max-width: 940px;
+    margin: 0 auto;
+  }
+
+  .ballot-viewport {
+    min-height: 420px;
+  }
+
+  .simulator-hint--top {
+    max-width: 820px;
+    margin: 0 auto 16px !important;
+    text-align: center;
+    font-size: 1.05rem;
+  }
+
+  .simulator-card__button--wide {
+    max-width: 340px;
+    margin-top: 26px;
   }
 }
 
